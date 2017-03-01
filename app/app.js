@@ -7,6 +7,13 @@
 
     $urlRouterProvider.otherwise('/');
     $stateProvider
+    
+    .state('home',{
+      url:'/',
+      templateUrl:'views/home/homepage.html',
+      controller:'HomePageController'
+    })
+    
     .state('signUp', {
       url: '/signup',
       templateUrl: 'views/signup/signup.html',

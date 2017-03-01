@@ -15,6 +15,8 @@ app.use('/styles',express.static(appRoot.path+'/styles'));
 app.use('/views',express.static(appRoot.path+'/views'));
 app.use('/signup',express.static(appRoot.path+'/views/signup'));
 app.use('/images',express.static(appRoot.path+'/images'));
+app.use('/js',express.static(appRoot.path+'/js'));
+
 
 
 
