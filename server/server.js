@@ -2,7 +2,7 @@ var express      =require("express"),
     mongoose     =require("mongoose"),
     bodyParser   =require("body-parser"),
     path         =require('path'),
-    appRoot      = require('app-root-path')
+    appRoot      = require('app-root-path'),
     User         =require("../models/user");
 
 var app=express();
@@ -16,7 +16,7 @@ app.use('/views',express.static(appRoot.path+'/views'));
 app.use('/signup',express.static(appRoot.path+'/views/signup'));
 app.use('/images',express.static(appRoot.path+'/images'));
 app.use('/js',express.static(appRoot.path+'/js'));
-
+app.use('/node_modules',express.static(appRoot.path+'/node_modules'));
 
 
 

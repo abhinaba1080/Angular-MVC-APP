@@ -14,15 +14,10 @@
  -->
 
 <body ng-controller="RegistrationController as reg">
-  <div class="row col-sm-6 col-sm-offset-3">
-    <h1>
-      Registration Form
-    </h1>
-    <fieldset>
-      <legend>
-        Registration
-      </legend>
-      <form name="regForm" novalidate>
+  <div id="signupDiv" >
+    <div class="containar col-sm-offset-4">
+      <fieldset>
+      <form name="regForm" class="reg-form" novalidate>
       
         <div class="form-group">
           <label for="password">User Name</label>
@@ -49,9 +44,9 @@
           <label for="password">Phone</label>
           <input type="text" name="phone" class="form-control" placeholder="Phone Number" ng-model="reg.user.phone"
                pattern="(\d{3})-(\d{3})-(\d{4})" required>
-        <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
-          phone number must be in the format: 123-123-1234
-        </span>
+          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">phone number must be in the format: 123-123-1234</span>
+<!--           swal("phone number must be in the format: 123-123-1234") -->
+          
         </div>
         
         <div class="form-group">
@@ -63,15 +58,20 @@
             <label for="password">Confirm Password</label>
             <input type="password" name="password2" id="password2" class="form-control"  placeholder="same password" ng-model="reg.user.password2" ng-match="password1" required />
             <span ng-if="regForm.password2.$invalid && regForm.password2.$touched">Password is required</span>
-            <span ng-if="(regForm.password2.$error.match && regForm.password2.$touched">Password Did not matched!</span>
+<!--             <span ng-if="(regForm.password2.$invalid && regForm.password2.$touched">Password Did not matched!</span> -->
         </div>
         
-        <button ng-disabled="regForm.$invalid" ng-click="reg.submit()">
-          submit
+        <div class="form-group">
+          <span class="agreement"> By clicking the below line you will be agree to our user policy</span>
+        </div>
+        
+        <button id="registration-submit" tupe="submit" ng-disabled="regForm.$invalid" ng-click="reg.submit()">
+          Join Now
         </button>
                 
       </form>
     </fieldset>
+    </div>
   </div>
 
 </body>

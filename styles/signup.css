@@ -1,0 +1,68 @@
+body{
+  box-sizing:border-box;
+}
+.navbar {
+    margin-bottom: 0 !important;
+} 
+#signupDiv{
+    background-image: url(../images/image_signup_back_08.jpg);
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:550px;
+}
+.reg-form{
+  
+    width: 400px;
+    padding: 15px 30px 30px;
+    background-color: #eee;
+    margin: 20px 0;
+  
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+}
+
+.agreement {
+    font-size: 12px;
+    line-height: 14px;
+    color: #66696a;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#registration-submit:hover {
+    background-color: #eddb11;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+#registration-submit{
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    text-decoration: none !important;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 15px;
+    height: 34px;
+    line-height: 32px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    background-color: #f6e312;
+    border-color: #e9ac1a;
+}
