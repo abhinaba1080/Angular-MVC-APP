@@ -204,35 +204,36 @@ body {
 
 
 /* FOOTER */
-.panel-footer {
-  margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  background-color: #222;
-  border-top: 0;
+.panel-footer{
+	margin-top: 30px;
+	padding-top: 2px;
+	padding-bottom: 10px;
+	background-color: #34495E;
+	border-top:0;
+	opacity: 0.75;
 }
-.panel-footer div.row {
-  margin-bottom: 35px;
+#footerList{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    font-weight: normal;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+#footerList>li{
+    font-size: 15px;
+    line-height: 14px;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-left:20px;
+    margin-bottom: 5px;
+    float: right;
 }
-#hours, #address {
-  line-height: 2;
-}
-#hours > span, #address > span {
-  font-size: 1.3em;
-}
-#address p {
-  color: #557c3e;
-  font-size: .8em;
-  line-height: 1.8;
-}
-#testimonials {
-  font-style: italic;
-}
-#testimonials p:nth-child(2) {
-  margin-top: 25px;
-}
-a[ui-sref="admin.auth"] {
-  color: #fff;
+#footerItem a{
+  color:black;
 }
 /* END FOOTER */
 
@@ -294,18 +295,9 @@ a[ui-sref="admin.auth"] {
   /* End Header */
 
   /* Footer */
-  .panel-footer section {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .panel-footer section:nth-child(3) {
-    margin-bottom: 0; /* margin already exists on the whole row */
-  }
-  .panel-footer section hr {
-    width: 50%;
-  }
+  
   /* End Footer */
-}
+
 
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
