@@ -24,10 +24,10 @@
            <input type="text" name="username" class="form-control" placeholder="username" ng-model="reg.user.username"
                required minlength="4" ng-maxlength="10">
               {{reg.user.username}}
-        <span ng-if="(regForm.username.$error.minlength || regForm.username.$error.required) && regForm.username.$touched">
+        <span id="error" ng-if="(regForm.username.$error.minlength || regForm.username.$error.required) && regForm.username.$touched">
           username must be atleast 4 characters long
         </span>
-        <span ng-if="regForm.username.$error.maxlength && regForm.username.$touched">
+        <span id="error" ng-if="regForm.username.$error.maxlength && regForm.username.$touched">
           username must not be longer than 10 characters
         </span>
         </div>
@@ -35,7 +35,7 @@
         <div class="form-group">  
           <label for="password">Email</label>
         <input type="text" name="email" class="form-control" placeholder="Email" ng-model="reg.user.email" required>
-        <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+        <span id="error" ng-if="regForm.email.$invalid && regForm.email.$touched">
           must have a valid email address: abc@xyz.com
         </span>
         </div>
@@ -44,7 +44,7 @@
           <label for="password">Phone</label>
           <input type="text" name="phone" class="form-control" placeholder="Phone Number" ng-model="reg.user.phone"
                pattern="(\d{3})-(\d{3})-(\d{4})" required>
-          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">phone number must be in the format: 123-123-1234</span>
+          <span id="error" ng-if="regForm.phone.$invalid && regForm.phone.$touched">phone number must be in the format: 123-123-1234</span>
 <!--           swal("phone number must be in the format: 123-123-1234") -->
           
         </div>
@@ -52,12 +52,12 @@
         <div class="form-group">
             <label for="password"> New Password</label>
             <input type="password" name="password1" id="password1" class="form-control" placeholder="new password" ng-model="reg.user.password1" required />
-            <span ng-if="regForm.password1.$invalid && regForm.password1.$touched">Password is required</span>
+            <span id="error" ng-if="regForm.password1.$invalid && regForm.password1.$touched">Password is required</span>
         </div>
         <div class="form-group">
             <label for="password">Confirm Password</label>
             <input type="password" name="password2" id="password2" class="form-control"  placeholder="same password" ng-model="reg.user.password2" ng-match="password1" required />
-            <span ng-if="regForm.password2.$invalid && regForm.password2.$touched">Password is required</span>
+            <span id="error" ng-if="regForm.password2.$invalid && regForm.password2.$touched">Password is required</span>
 <!--             <span ng-if="(regForm.password2.$invalid && regForm.password2.$touched">Password Did not matched!</span> -->
         </div>
         

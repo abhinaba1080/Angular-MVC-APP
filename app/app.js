@@ -1,8 +1,16 @@
 (function(){
   angular.module('NewApp',['ui.router'])
+  .controller('NewAppController',NewAppController)
   .config(RoutesConfig);
+  
+  
+  
+  NewAppController.$inject=['$scope'];
+  function NewAppController($scope){
+    var page=this;
+  }
 
-  RoutesConfig.inject=['$stateProvider','$urlRouterProvider'];
+  RoutesConfig.$inject=['$stateProvider','$urlRouterProvider'];
   function RoutesConfig($stateProvider,$urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
@@ -20,5 +28,7 @@
       controller:'SignupController'
     });
   }
+  
+ 
 
 })();

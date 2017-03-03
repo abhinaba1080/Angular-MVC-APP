@@ -10,15 +10,21 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:550px;
+    height: 100%;
 }
+
+#error{
+  color:red;
+  transition: all 1s;
+}
+
 .reg-form{
   
     width: 400px;
     padding: 15px 30px 30px;
     background-color: #eee;
     margin: 20px 0;
-  
+    font-family: 'Oxygen', sans-serif;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
     box-shadow: 0 3px 5px rgba(0,0,0,0.25);
