@@ -72,3 +72,17 @@ body{
     background-color: #f6e312;
     border-color: #e9ac1a;
 }
+
+
+/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+@media (max-width: 479px) {
+  
+  .reg-form{
+    width: 23.5em;
+    margin-left: 5%;
+  }
+}
+
+
+
+
