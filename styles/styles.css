@@ -248,11 +248,7 @@ body {
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
-  #logo-img {
-    background: url('../images/restaurant-logo_medium.png') no-repeat;
-    width: 100px;
-    height: 100px;
-    margin: 5px 5px 5px 0;
+  
   }
   /* End Header */
 }
@@ -285,21 +281,6 @@ body {
     margin-right: 5px;
   }
 
-  #call-btn > a {
-    font-size: 1.5em;
-    display: block;
-    margin: 0 20px;
-    padding: 10px;
-    border: 2px solid #fff;
-    background-color: #f6b319;
-    color: #951c49;
-  }
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
   /* End Header */
 
   /* Footer */
