@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/signup.css">
 	<link rel="stylesheet" type="text/css" href="styles/login.css">
+	<link rel="stylesheet" type="text/css" href="styles/timeline-content.css">
 	
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
 <!-- 	<link rel="stylesheet" type="text/css" href="styles/animations.css"> -->
@@ -27,94 +28,10 @@
 </head>
 
 <body ng-controller="NewAppController as ctrl">
-	<header>
-		<nav id="header-nav" class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<a href="index.html" class="pull-left visible-md visible-lg">
-						<div id="logo-img" alt="Logo image"></div>
-					</a>
-
-					<div class="navbar-brand">
-						<a href="index.html"><h1></h1></a>
-					</div>
-
-					<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-				</div>
-
-				<div id="collapsable-nav" class="collapse navbar-collapse">
-					<ul id="nav-list" class="nav navbar-nav navbar-right">
-						<li id="navHomeButton" class="visible-all">
-							<a href="index.html">
-								<i class="fa fa-home" aria-hidden="true"></i> Home</a>
-						</li>
-						<li  data-toggle="modal" data-target="#myModal">
-							<a href="#">
-								<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Login</a>
-						</li>
-						<li>
-							<a ui-sref="signUp">
-								<i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;Register</a>
-						</li>
-						<li>
-							<a>
-								<i class="fa fa-rocket" aria-hidden="true"></i>&nbsp;Explore</a>
-						</li>
-						<li>
-							<span id="socialLinks">
-                <a href="#"><i id="SocialIcon" class="fa fa-facebook-square"></i></a>
-                <a href="#"><i id="SocialIcon" class="fa fa-google-plus-official"></i></a>
-                <a href="#"><i id="SocialIcon" class="fa fa-instagram"></i></a>
-                <a href="#"><i id="SocialIcon" class="fa fa-pinterest-square"></i></a>
-                <a href="#"><i id="SocialIcon" class="fa fa-youtube"></i></a>
-                <a href="#"><i id="SocialIcon" class="fa fa-twitter-square"></i></a>
-
-            </sapn>
-              </li>
-            </ul><!-- #nav-list -->
-          </div><!-- .collapse .navbar-collapse -->
-        </div><!-- .container -->
-      </nav><!-- #header-nav -->
-    </header>
+	
     
     
-	<!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div id="modalLogin" class="modal-dialog">
-    
-      <!-- Modal content-->
-        <form class="modal-body" action="#" id="login-form">
-  				<div class="heading">Login to NewApp</div>
-  				<div class="left">
-    				<label for="email">Email</label> <br />
-    				<input type="email" name="email" id="email" /> <br />
-   			 		<label for="password">Password</label> <br />
-    				<input type="password" name="password" id="pass" /> <br />
-    				<input type="submit" value="Login" />
-  				</div>
-  				<div class="right">
-    				<div class="connect">Connect with</div>
-    				<a href="" class="facebook">
-      			<span class="fontawesome-facebook"><i class="fa fa-facebook fa-10x" aria-hidden="true"></i></span>
-    				</a> <br />
-    				<a href="" class="twitter">
-      			<span class="fontawesome-twitter"><i class="fa fa-twitter fa-10x" aria-hidden="true"></i></span>
-    				</a> <br />
-    				<a href="" class="google-plus">
-      			<span class="fontawesome-google-plus"><i class="fa fa-google-plus fa-10x " aria-hidden="true"></i></span>
-    				</a>
-  				</div>
-					<div class="modal-footer">
-          	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        	</div>
-				</form>  
-    </div>
-  </div>
+
      
 
 
@@ -131,12 +48,18 @@
 			<script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
 <!-- 			<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
 
-
-
+	
+			<!--custom javascript files-->
+				<script src="js/timeline-content.js"></script>		
+	
+	
+	
+			<!-- controllers-->
 			<!--      <script src="js/parallax.js"></script>  -->
 			<script src="app/app.js"></script>
 			<script src="views/signup/signup-controller.js"></script>
 			<script src="views/home/homepage-controller.js"></script>
+			<script src="views/explore/explore-controller.js"></script>
 
 
 

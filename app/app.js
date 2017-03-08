@@ -26,6 +26,16 @@
       url: '/signup',
       templateUrl: 'views/signup/signup.html',
       controller:'SignupController'
+    })
+    
+    .state('explore',{
+      url:'/explore',
+      templateUrl:'views/explore/explore.html',
+      controller:'ExploreController'
+    })
+    .state('timelinePage',{
+      url:'/timeline',
+      templateUrl:'views/timeline-page/timeline-page.html'
     });
   }
   
