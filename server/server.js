@@ -7,7 +7,7 @@ var express      =require("express"),
 
 var app=express();
 
-//mongoose.connect("mongodb://127.0.0.1:27017/NewApp");
+mongoose.connect("mongodb://127.0.0.1:27017/NewApp");
 
 app.use('/app',express.static(appRoot.path+'/app'));
 app.use('/lib',express.static(appRoot.path+'/lib'));
@@ -17,6 +17,7 @@ app.use('/signup',express.static(appRoot.path+'/views/signup'));
 app.use('/explore',express.static(appRoot.path+'/views/explore'));
 app.use('/images',express.static(appRoot.path+'/images'));
 app.use('/js',express.static(appRoot.path+'/js'));
+app.use('/db',express.static(appRoot.path+'/db'));
 app.use('/node_modules',express.static(appRoot.path+'/node_modules'));
 
 

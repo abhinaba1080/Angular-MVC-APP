@@ -1,23 +1,27 @@
 {
-  "name": "newapp_demo",
+  "name": "newapp",
   "version": "1.0.0",
-  "description": "it is about social networking",
+  "description": "creative people app",
   "main": "index.js",
   "dependencies": {
-    "app-root-path": "^2.0.1",
-    "body-parser": "^1.16.1",
-    "ejs": "^2.5.5",
-    "express": "^4.14.1",
-    "express-session": "^1.15.1",
-    "nodemon": "^1.11.0"
+    "passport-local-mongoose": "^4.0.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "any"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinaba1080/NewApp.git"
   },
   "keywords": [
     "any"
   ],
-  "author": "abhinaba",
-  "license": "ISC"
+  "author": "Abhinaba Ghosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinaba1080/NewApp/issues"
+  },
+  "homepage": "https://github.com/abhinaba1080/NewApp#readme"
 }
