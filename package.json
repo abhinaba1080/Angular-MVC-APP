@@ -1,11 +1,13 @@
 {
   "name": "newapp",
   "version": "1.0.0",
-  "description": "creative people app",
+  "description": "the app is about online portal for creative people. they can share and make portfolio of their work. ",
   "main": "index.js",
   "dependencies": {
-    "passport-local-mongoose": "^4.0.0",
-    "path": "^0.12.7"
+    "app-root-path": "^2.0.1",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.8.6"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,9 +18,9 @@
     "url": "git+https://github.com/abhinaba1080/NewApp.git"
   },
   "keywords": [
-    "any"
+    "none"
   ],
-  "author": "Abhinaba Ghosh",
+  "author": "Abhinaba ghosh",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/abhinaba1080/NewApp/issues"

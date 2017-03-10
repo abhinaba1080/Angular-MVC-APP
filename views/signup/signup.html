@@ -75,13 +75,12 @@
   <div id="signupDiv" >
     <div class="containar col-sm-offset-4">
       <fieldset>
-      <form id="signupForm" name="regForm" class="reg-form" novalidate>
+      <form id="signupForm" name="regForm" class="reg-form" method="post" novalidate>
       
         <div class="form-group">
           <label for="password">User Name</label>
            <input type="text" name="username" class="form-control" placeholder="username" ng-model="reg.user.username"
                required minlength="4" ng-maxlength="10">
-              {{reg.user.username}}
         <span id="error" ng-if="(regForm.username.$error.minlength || regForm.username.$error.required) && regForm.username.$touched">
           username must be atleast 4 characters long
         </span>
@@ -123,7 +122,7 @@
           <span class="agreement"> By clicking the below line you will be agree to our user policy</span>
         </div>
         
-        <button id="registration-submit" tupe="submit" ng-disabled="regForm.$invalid" ng-click="reg.submit()">
+        <button id="registration-submit" type="submit" ng-disabled="regForm.$invalid" ng-click="reg.createUser()">
           Join Now
         </button>
                 

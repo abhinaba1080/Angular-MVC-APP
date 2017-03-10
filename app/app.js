@@ -25,7 +25,7 @@
     .state('signUp', {
       url: '/signup',
       templateUrl: 'views/signup/signup.html',
-      controller:'SignupController'
+      controller:'SignupController as reg'
     })
     
     .state('explore',{
