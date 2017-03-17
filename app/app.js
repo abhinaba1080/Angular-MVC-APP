@@ -22,6 +22,7 @@
       controller:'HomePageController'
     })
     
+    
     .state('signUp', {
       url: '/signup',
       templateUrl: 'views/signup/signup.html',
@@ -36,6 +37,11 @@
     .state('timelinePage',{
       url:'/timeline',
       templateUrl:'views/timeline-page/timeline-page.html'
+    })
+     
+    .state('signup_success',{
+      url:'/signup_success',
+      templateUrl:'views/sign-up-successfull/signup-success.html'
     });
   }
   

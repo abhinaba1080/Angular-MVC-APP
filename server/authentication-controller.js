@@ -11,3 +11,16 @@ module.exports.signup=function(req,res){
   
   res.json(req.body);
 };
+
+module.exports.login=function(req,res){
+  console.log("req.body at authen-controller: ",req.body);
+  User.find(req.body,function(err,results){
+            if(err){
+             console.log("Error out");  
+            }
+            if(results && results.length==1){
+              res.json(req.body.email);
+              console.log(req.body);
+            }
+            })
+};

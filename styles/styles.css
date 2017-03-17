@@ -34,7 +34,7 @@ body {
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
-  background-image: url('logo2.png');
+/*   background-image: url('logo2.png'); */
   color: #557c3e;
   font-size: 1.5em;
   text-transform: uppercase;

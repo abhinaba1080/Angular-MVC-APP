@@ -15,7 +15,9 @@ app.use(bodyParser.json());
 app.use('/app',express.static(appRoot.path+'/app'));
 app.use('/lib',express.static(appRoot.path+'/lib'));
 app.use('/styles',express.static(appRoot.path+'/styles'));
+app.use('/styles',express.static(appRoot.path+'/styles'));
 app.use('/views',express.static(appRoot.path+'/views'));
+app.use('/navigation',express.static(appRoot.path+'/views/navigation'));
 app.use('/signup',express.static(appRoot.path+'/views/signup'));
 app.use('/explore',express.static(appRoot.path+'/views/explore'));
 app.use('/images',express.static(appRoot.path+'/images'));
@@ -34,6 +36,7 @@ app.get('/index.html',function(req,res){
 
 //authentication of user
 app.post('/signup',authenticationController.signup);
+app.post('/login',authenticationController.login);
 
 
 app.listen(3000, function () {
