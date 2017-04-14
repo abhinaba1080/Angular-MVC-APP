@@ -60,14 +60,14 @@
     <div id="modalLogin" class="modal-dialog">
     
       <!-- Modal content-->
-        <form class="modal-body" action="#" id="login-form" ng-controller="NavigationController as log">
+        <form class="modal-body"  id="login-form" method="post"  ng-controller="NavigationController as log">
   				<div class="heading">Login to NewApp</div>
   				<div class="left">
     				<label for="email">Email</label> <br />
     				<input type="email" name="email" id="email" ng-model="log.user.email"/> <br />
    			 		<label for="password">Password</label> <br />
     				<input type="password" name="password" id="pass" ng-model="log.user.password" /> <br />
-    				<input type="submit" value="Login" ng-click="log.logUserIn()" />
+    				<input type="submit" value="Login" ng-click="log.logUserIn(log.user.email,log.user.password)" />
   				</div>
   				<div class="right">
     				<div class="connect">Connect with</div>

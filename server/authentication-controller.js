@@ -6,21 +6,42 @@ var express      =require("express"),
     User         =require("../models/user");
 
 module.exports.signup=function(req,res){
-  var user=new User(req.body);
+  
+   var user=new User();
+  
+  var hashPassword=user.generateHash(req.body.password);
+  user.username=req.body.username;
+  user.email=req.body.email;
+  user.phone=req.body.phone;
+  user.password=hashPassword;
+  
   user.save();
   
   res.json(req.body);
 };
 
-module.exports.login=function(req,res){
-  console.log("req.body at authen-controller: ",req.body);
-  User.find(req.body,function(err,results){
-            if(err){
-             console.log("Error out");  
-            }
-            if(results && results.length==1){
-              res.json(req.body.email);
-              console.log(req.body);
-            }
-            })
+
+
+module.exports.login=function(req,res,next){
+  var email=req.body.email;
+  var password=req.body.password;
+  
+  User.findOne({email:email}, function(err,user){
+      if(user==null){
+        res.status(400).end('No account with this email');
+      }
+     else{
+      req.body.username=user.username;
+      user.comparePassword(password,function(err,isMatch){
+       if(isMatch && isMatch === true){
+         next();
+        // console.log("account matched!!");
+         //res.json(req.body);
+       }else{
+         res.status(400).end('Invalid email or password');
+       }
+     });
+     }
+    });
+  
 };

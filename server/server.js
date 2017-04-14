@@ -2,10 +2,14 @@ var express      =require("express"),
     mongoose     =require("mongoose"),
     bodyParser   =require("body-parser"),
     path         =require('path'),
-    appRoot      = require('app-root-path');
+    appRoot      = require('app-root-path'),
+    jwt = require('jsonwebtoken');
 //     User         =require("../models/user");
 
 var app=express();
+
+var jwtSecret = 'kjwdjs65$ikksop0982shj';
+
 var authenticationController=require('../server/authentication-controller.js');
 
 mongoose.connect("mongodb://127.0.0.1:27017/NewAppDb");
@@ -36,7 +40,11 @@ app.get('/index.html',function(req,res){
 
 //authentication of user
 app.post('/signup',authenticationController.signup);
-app.post('/login',authenticationController.login);
+//app.post('/login',authenticationController.login);
+app.post('/login',authenticationController.login,function(req,res){
+    var token = jwt.sign({username: req.body.username}, jwtSecret);
+    res.status(200).send({token: token,username: req.body.username});
+});
 
 
 app.listen(3000, function () {

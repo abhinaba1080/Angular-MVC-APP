@@ -7,6 +7,7 @@
   function SignupController($scope,$state,$http) {
     var reg=this;
     console.log(reg);
+    console.log("signup_http: ",$http);
     reg.createUser=function(){
       console.log("reg.user: ",reg.user);
       $http.post('/signup',reg.user).success(function(response){
