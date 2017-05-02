@@ -10,10 +10,12 @@ module.exports.signup=function(req,res){
    var user=new User();
   
   var hashPassword=user.generateHash(req.body.password);
-  user.username=req.body.username;
-  user.email=req.body.email;
-  user.phone=req.body.phone;
-  user.password=hashPassword;
+  user.local.username=req.body.username;
+  user.local.email=req.body.email;
+  user.local.phone=req.body.phone;
+  user.local.password=hashPassword;
+  
+  console.log("email: ",user);
   
   user.save();
   
@@ -26,7 +28,7 @@ module.exports.login=function(req,res,next){
   var email=req.body.email;
   var password=req.body.password;
   
-  User.findOne({email:email}, function(err,user){
+  User.findOne({'local.email':email}, function(err,user){
       if(user==null){
         res.status(400).end('No account with this email');
       }
@@ -35,8 +37,6 @@ module.exports.login=function(req,res,next){
       user.comparePassword(password,function(err,isMatch){
        if(isMatch && isMatch === true){
          next();
-        // console.log("account matched!!");
-         //res.json(req.body);
        }else{
          res.status(400).end('Invalid email or password');
        }

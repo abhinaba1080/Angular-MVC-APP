@@ -62,7 +62,7 @@
             AuthTokenService.setToken(response.token);
             Storage.save('username',response.username);
             Storage.save('loggedIn',true);
-        //  $state.go();
+            $state.go('timelinePage');
             
           })
         .error(function(error){

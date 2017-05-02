@@ -6,11 +6,22 @@ var passportLocalMongoose=require("passport-local-mongoose");
 
 
 var UserSchema=new mongoose.Schema({
-  username: String,
-  password: String,
-  password2: String,
-  phone:String,
-  email:String
+ 
+  local         :    {
+                          username: String,
+                          password: String,
+                          password2: String,
+                          phone:String,
+                          email:String
+                      },
+  
+  facebook       :    {
+                          id           : String,
+                          token        : String,
+                          email        : String,
+                          name         : String
+                      }
+  
 });
 
 UserSchema.methods.generateHash=function(password){
@@ -31,15 +42,12 @@ UserSchema.methods.generateJwt = function() {
 };
 
 UserSchema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+    bcrypt.compare(candidatePassword, this.local.password, function(err, isMatch) {
         if (err) return cb(err);
         cb(null, isMatch);
     });
 };
 
-// UserSchema.methods.validPassword=function(password){
-//   return bcrypt.compareSync(password, this.local.password);
-// };
 
 UserSchema.plugin(passportLocalMongoose);
 module.exports=mongoose.model("User",UserSchema);

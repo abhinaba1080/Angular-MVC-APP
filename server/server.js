@@ -40,7 +40,6 @@ app.get('/index.html',function(req,res){
 
 //authentication of user
 app.post('/signup',authenticationController.signup);
-//app.post('/login',authenticationController.login);
 app.post('/login',authenticationController.login,function(req,res){
     var token = jwt.sign({username: req.body.username}, jwtSecret);
     res.status(200).send({token: token,username: req.body.username});
