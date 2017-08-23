@@ -23,6 +23,7 @@ app.use('/styles',express.static(appRoot.path+'/styles'));
 app.use('/views',express.static(appRoot.path+'/views'));
 app.use('/navigation',express.static(appRoot.path+'/views/navigation'));
 app.use('/signup',express.static(appRoot.path+'/views/signup'));
+app.use('/timeline-page',express.static(appRoot.path+'/views/timeline-page'));
 app.use('/explore',express.static(appRoot.path+'/views/explore'));
 app.use('/images',express.static(appRoot.path+'/images'));
 app.use('/js',express.static(appRoot.path+'/js'));
@@ -46,6 +47,6 @@ app.post('/login',authenticationController.login,function(req,res){
 });
 
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(3030, function () {
+  console.log('Example app listening on port 3030!')
 });

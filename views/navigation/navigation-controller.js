@@ -50,8 +50,8 @@
   
 
 
-  NavigationController.$inject=['$scope','$state','$http','AuthTokenService','Storage'];
-  function NavigationController($scope,$state,$http,AuthTokenService,Storage){
+  NavigationController.$inject=['$scope','$state','$http','AuthTokenService','Storage','$window'];
+  function NavigationController($scope,$state,$http,AuthTokenService,Storage,$window){
     var log=this;
     log.logUserIn=function(email,password){
       var request_body={"email":email,"password":password};
