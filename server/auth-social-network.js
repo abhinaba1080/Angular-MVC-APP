@@ -1,23 +1,39 @@
+var passport         	=require("passport"),
+		FacebookStrategy 	=require('passport-facebook').Strategy,
+		userSocial        =require("../models/user-social"),
+		congig						=require("../models/oauth");
 
 
-module.exports = {
+module.exports=passport.use(new FacebookStrategy({
 
-	'facebookAuth' : {
-		'clientID' 		: process.env.FACEBOOK_ID ||'423557898001367', // your App ID
-		'clientSecret' 	: process.env.FACEBOOK_SECRET || 'b01157da515a02d901807551b18afb75', // your App Secret
-		'callbackURL' 	: 'http://localhost:3000/auth/facebook/callback'
-	},
+							clientID			:	config.facebook.clientID,
+							clientSecret	:	config.facebook.clientSecret,
+							callbackURL		:	config.facebook.callbackURL
+						},
+						function(accessToken, refreshToken, profile, done){
+								userSocial.findOne({oauthID: profile.id},function(err,user){
+									if(err){
+										console.log(err); //watch the error
+									}
+									if(!err && user != null){
+										done(null,user);
+									}
+									else{
+										user=new userSocial({
+											oauthID: profile.id,
+											name: profile.displayName,
+											created: Date.now()
+										});
+										user.save(function(err){
+											if(err){
+												console.log(err);
+											}
+											else{
+												console.log("saving user...");
+												done(null, user);
+											}
+										});
+									}
+								});
 
-// 	'twitterAuth' : {
-// 		'consumerKey' 		: 'your-consumer-key-here',
-// 		'consumerSecret' 	: 'your-client-secret-here',
-// 		'callbackURL' 		: 'http://localhost:8080/auth/twitter/callback'
-// 	},
-
-// 	'googleAuth' : {
-// 		'clientID' 		: 'your-secret-clientID-here',
-// 		'clientSecret' 	: 'your-client-secret-here',
-// 		'callbackURL' 	: 'http://localhost:8080/auth/google/callback'
-// 	}
-
-};
+}));

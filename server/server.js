@@ -1,9 +1,11 @@
-var express      =require("express"),
-    mongoose     =require("mongoose"),
-    bodyParser   =require("body-parser"),
-    path         =require('path'),
-    appRoot      = require('app-root-path'),
-    jwt = require('jsonwebtoken');
+var express      =  require("express"),
+    mongoose     =  require("mongoose"),
+    bodyParser   =  require("body-parser"),
+    path         =  require('path'),
+    appRoot      =  require('app-root-path'),
+    jwt          =  require('jsonwebtoken'),
+    passport     =  require('passport'),
+    userSocial   =  require("../models/user-social");
 //     User         =require("../models/user");
 
 var app=express();
@@ -31,7 +33,22 @@ app.use('/db',express.static(appRoot.path+'/db'));
 app.use('/server',express.static(appRoot.path+'/server'));
 app.use('/node_modules',express.static(appRoot.path+'/node_modules'));
 
+// Serialize and deserialize
+passport.SerializeUser(function(user,done){
+  console.log('SerializeUser: ',user._id);
+});
 
+passport.deserializeUser(function(id,done){
+  userSocial.findByID(id,function(err,user){
+    console.log(user);
+    if(!err){
+      done(null,user);
+    }
+    else{
+      done(err,null);
+    }
+  });
+});
 
 
 
@@ -45,6 +62,9 @@ app.post('/login',authenticationController.login,function(req,res){
     var token = jwt.sign({username: req.body.username}, jwtSecret);
     res.status(200).send({token: token,username: req.body.username});
 });
+
+// authentication of users login by Social-Networks
+app.
 
 
 app.listen(3030, function () {
