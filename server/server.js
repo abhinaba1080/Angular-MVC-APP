@@ -17,6 +17,8 @@ var authenticationController=require('../server/authentication-controller.js');
 mongoose.connect("mongodb://127.0.0.1:27017/NewAppDb",{ useMongoClient: true });
 
 app.use(bodyParser.json());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/app',express.static(appRoot.path+'/app'));
 app.use('/lib',express.static(appRoot.path+'/lib'));
@@ -34,7 +36,7 @@ app.use('/server',express.static(appRoot.path+'/server'));
 app.use('/node_modules',express.static(appRoot.path+'/node_modules'));
 
 // Serialize and deserialize
-passport.SerializeUser(function(user,done){
+passport.serializeUser(function(user,done){
   console.log('SerializeUser: ',user._id);
 });
 
@@ -63,9 +65,36 @@ app.post('/login',authenticationController.login,function(req,res){
     res.status(200).send({token: token,username: req.body.username});
 });
 
-// authentication of users login by Social-Networks
-app.
+//after login via social network , controls return to '/action'
+app.get('/account',ensureAuthenticated, function(req,res){
+  userSocial.findByID(req.session.passport.user,function(err,user){
+    if(err){
+      console.log(err); //handle error
+    }
+    else{
+      res.render('account',{user:user});
+    }
+  });
+});
 
+// authentication of users login by Social-Networks
+app.get('/auth/facebook',
+  passport.authenticate('facebook'),
+  function(req,res){});
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook',{failureRedirect:'/'}),
+  function(req,res){
+      res.redirect('/account');
+  });
+
+
+//test the social authentication
+function ensureAuthenticated(req,res,next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect('/');
+}
 
 app.listen(3030, function () {
   console.log('Example app listening on port 3030!')
