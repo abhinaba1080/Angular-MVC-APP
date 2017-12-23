@@ -1,7 +1,7 @@
 var passport         	=require("passport"),
 		FacebookStrategy 	=require('passport-facebook').Strategy,
 		userSocial        =require("../models/user-social"),
-		congig						=require("../models/oauth.js");
+		config						=require("../models/oauth.js");
 
 
 module.exports=passport.use(new FacebookStrategy({

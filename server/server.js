@@ -5,7 +5,8 @@ var express      =  require("express"),
     appRoot      =  require('app-root-path'),
     jwt          =  require('jsonwebtoken'),
     passport     =  require('passport'),
-    userSocial   =  require("../models/user-social");
+    userSocial   =  require("../models/user-social")
+    socialAuth   =  require('../server/auth-social-network.js');
 //     User         =require("../models/user");
 
 var app=express();
@@ -93,7 +94,7 @@ function ensureAuthenticated(req,res,next){
   if(req.isAuthenticated()){
     return next();
   }
-  res.redirect('/');
+  res.redirect('/index.html');
 }
 
 app.listen(3030, function () {
