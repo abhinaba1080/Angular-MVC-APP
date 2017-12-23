@@ -6,22 +6,15 @@ var passportLocalMongoose=require("passport-local-mongoose");
 
 
 var UserSchema=new mongoose.Schema({
- 
-  local         :    {
-                          username: String,
-                          password: String,
-                          password2: String,
-                          phone:String,
-                          email:String
-                      },
-  
-  facebook       :    {
-                          id           : String,
-                          token        : String,
-                          email        : String,
-                          name         : String
-                      }
-  
+
+
+    username: String,
+    password: String,
+    password2: String,
+    phone:String,
+    email:String
+
+
 });
 
 UserSchema.methods.generateHash=function(password){
@@ -38,7 +31,7 @@ UserSchema.methods.generateJwt = function() {
     email: this.email,
     name: this.name,
     exp: parseInt(expiry.getTime() / 1000)
-  }, process.env.JWT_SECRET); 
+  }, process.env.JWT_SECRET);
 };
 
 UserSchema.methods.comparePassword = function(candidatePassword, cb) {

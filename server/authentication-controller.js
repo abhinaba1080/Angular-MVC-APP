@@ -7,19 +7,17 @@ var express      =require("express"),
 
 
 module.exports.signup=function(req,res){
-  
-   var user=new User();
-  
+
+  var user=new User();
+
   var hashPassword=user.generateHash(req.body.password);
-  user.local.username=req.body.username;
-  user.local.email=req.body.email;
-  user.local.phone=req.body.phone;
-  user.local.password=hashPassword;
-  
-  console.log("email: ",user);
-  console.log("mongoose connection: ",mongoose.connection.readyState);
+  user.username=req.body.username;
+  user.email=req.body.email;
+  user.phone=req.body.phone;
+  user.password=hashPassword;
+  console.log("new user: ",user);
   user.save();
-  
+
   res.json(req.body);
 };
 
@@ -27,8 +25,8 @@ module.exports.signup=function(req,res){
 
 module.exports.login=function(req,res,next){
   var email=req.body.email;
-  var password=req.body.password; 
-  User.findOne({'local.email':email}, function(err,user){ 
+  var password=req.body.password;
+  User.findOne({'local.email':email}, function(err,user){
     if(user==null){
         res.status(400).end('No account with this email');
       }
@@ -43,5 +41,5 @@ module.exports.login=function(req,res,next){
      });
      }
     });
-  
+
 };

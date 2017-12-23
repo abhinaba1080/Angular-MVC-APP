@@ -12,7 +12,7 @@ var jwtSecret = 'kjwdjs65$ikksop0982shj';
 
 var authenticationController=require('../server/authentication-controller.js');
 
-mongoose.connect("mongodb://127.0.0.1:27017/NewAppDb");
+mongoose.connect("mongodb://127.0.0.1:27017/NewAppDb",{ useMongoClient: true });
 
 app.use(bodyParser.json());
 
