@@ -2,9 +2,9 @@
   angular.module('NewApp',['ui.router'])
   .controller('NewAppController',NewAppController)
   .config(RoutesConfig);
-  
-  
-  
+
+
+
   NewAppController.$inject=['$scope'];
   function NewAppController($scope){
     var page=this;
@@ -15,20 +15,20 @@
 
     $urlRouterProvider.otherwise('/');
     $stateProvider
-    
+
     .state('home',{
       url:'/',
       templateUrl:'views/home/homepage.html',
       controller:'HomePageController'
     })
-    
-    
+
+
     .state('signUp', {
       url: '/signup',
       templateUrl: 'views/signup/signup.html',
       controller:'SignupController as reg'
     })
-    
+
     .state('explore',{
       url:'/explore',
       templateUrl:'views/explore/explore.html',
@@ -38,13 +38,13 @@
       url:'/timeline',
       templateUrl:'views/timeline-page/timeline-page.html'
     })
-     
+
     .state('signup_success',{
       url:'/signup_success',
       templateUrl:'views/sign-up-successfull/signup-success.html'
     });
   }
-  
- 
+
+
 
 })();

@@ -5,17 +5,20 @@ var express      =  require("express"),
     appRoot      =  require('app-root-path'),
     jwt          =  require('jsonwebtoken'),
     passport     =  require('passport'),
-    userSocial   =  require("../models/user-social")
+    userSocial   =  require("../models/user-social"),
     socialAuth   =  require('../server/auth-social-network.js');
 //     User         =require("../models/user");
 
 var app=express();
 
+
 var jwtSecret = 'kjwdjs65$ikksop0982shj';
 
 var authenticationController=require('../server/authentication-controller.js');
 
-mongoose.connect("mongodb://127.0.0.1:27017/NewAppDb",{ useMongoClient: true });
+// mongodb Configure
+mongoose.Promise = global.Promise
+mongoose.connect("mongodb://127.0.0.1:27017/NewAppDb",{ useMongoClient: true})
 
 app.use(bodyParser.json());
 app.use(passport.initialize());
@@ -81,10 +84,13 @@ app.get('/account',ensureAuthenticated, function(req,res){
 // authentication of users login by Social-Networks
 app.get('/auth/facebook',
   passport.authenticate('facebook'),
-  function(req,res){});
-app.get('/auth/facebook/callback',
-  passport.authenticate('facebook',{failureRedirect:'/'}),
   function(req,res){
+    console.log("auth/facebook: ");
+  });
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook',{failureRedirect:'/index.html'}),
+  function(req,res){
+    console.log("account hit");
       res.redirect('/account');
   });
 
@@ -97,6 +103,16 @@ function ensureAuthenticated(req,res,next){
   res.redirect('/index.html');
 }
 
+// logout routing
+app.get('/logout',function(req, res){
+  req.logout();
+  res.redirect('/index.html');
+});
+
+
+
+
+//App Listen to this port
 app.listen(3030, function () {
   console.log('Example app listening on port 3030!')
 });

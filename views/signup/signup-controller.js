@@ -6,10 +6,10 @@
   SignupController.$inject=['$scope','$state','$http'];
   function SignupController($scope,$state,$http) {
     var reg=this;
-    console.log(reg);
-    console.log("signup_http: ",$http);
+    //console.log(reg);
+    //console.log("signup_http: ",$http);
     reg.createUser=function(){
-      console.log("reg.user: ",reg.user);
+      //console.log("reg.user: ",reg.user);
       $http.post('/signup',reg.user).success(function(response){
           swal({
                 title: 'You Are Registered',
@@ -19,7 +19,7 @@
                 confirmButtonText: 'Login'
               }).then(function () {
                                       $state.go('signup_success');
-  
+
                   })
       }).error(function(){
         swal(
@@ -27,10 +27,10 @@
                 'Something went wrong!',
                  'error'
         )
-       console.log(error); 
+       console.log(error);
       });
     };
-   
+
   }
 
 

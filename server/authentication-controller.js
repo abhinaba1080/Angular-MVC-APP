@@ -15,7 +15,7 @@ module.exports.signup=function(req,res){
   user.email=req.body.email;
   user.phone=req.body.phone;
   user.password=hashPassword;
-  console.log("new user: ",user);
+  //console.log("new user: ",user);
   user.save();
 
   res.json(req.body);
@@ -26,7 +26,7 @@ module.exports.signup=function(req,res){
 module.exports.login=function(req,res,next){
   var email=req.body.email;
   var password=req.body.password;
-  User.findOne({'local.email':email}, function(err,user){
+  User.findOne({'email':email}, function(err,user){
     if(user==null){
         res.status(400).end('No account with this email');
       }

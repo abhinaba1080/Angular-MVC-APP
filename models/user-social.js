@@ -1,10 +1,24 @@
-var mongoose=require("mongoose");
+var mongoose = require('mongoose');
 
-//declearing the mongoose model
-var userSocialSchema=new mongoose.Schema({
-  oauthID:Number,
-  name:String,
-  created:Date
+// create a user model
+var userSocial = mongoose.model('userSocial', {
+  oauthID: String,
+  username: String
 });
 
-module.exports=mongoose.model("userSocial",userSocialSchema);
+
+module.exports = userSocial;
+
+
+
+// var mongoose=require("mongoose");
+// var passportLocalMongoose=require("passport-local-mongoose");
+//
+// //declearing the mongoose model
+// var userSocialSchema=new mongoose.Schema({
+//   oauthID:String,
+//   username:String
+// });
+//
+// userSocialSchema.plugin(passportLocalMongoose);
+// module.exports=mongoose.model("userSocial",userSocialSchema);
