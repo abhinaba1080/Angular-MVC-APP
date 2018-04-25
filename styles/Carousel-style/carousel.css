@@ -1,0 +1,48 @@
+.carousel .item {
+    background:#FDFEFE;
+    overflow:hidden;
+    padding:10px;
+    border-radius: 5%;
+    height: 500px;
+}
+.carousel-inner > .item {
+    float: left;
+    padding: 10px;
+    height: none;
+    width:  100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.carousel-inner >#slide1{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-image: url('../../images/sliding_jumbotron/jumbo1.jpg');
+}
+
+.carousel-inner > #slide2{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-image: url('../../images/sliding_jumbotron/jumbo2.jpg');
+  background-size: 100%;
+}
+
+.carousel-inner > #slide3{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  background-image: url('../../images/sliding_jumbotron/jumbo3.jpg');
+  background-size: 100%;
+}
+
+
+
+.carousel-inner > .item > img:hover {
+}
+
+.glyphicon {
+    background-color: #566573  ;
+    color: white;
+    padding: 60px;
+    border-radius: 90%;
+}

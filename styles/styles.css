@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
-  color: #fff;
-  background-color: #f5f5f5;
+  color: #FDFEFE;
+  background-color: #FDFEFE;
   font-family: 'Oxygen', sans-serif;
   box-sizing: border-box;
 }
@@ -93,7 +93,7 @@ body {
 .bgimg-1{
     background-image: url('../images/img_parallax.jpg');
     min-height: 400px;
-  
+
 }
 .bgimg-2{
   background-image: url('../images/img_parallax2.jpg');
@@ -124,7 +124,7 @@ body {
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
 /*     position: relative; */
     opacity: 0.75;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,7 +142,7 @@ body {
   margin-left:30px;
   min-height:500px;
   background-color:#183442;
-  
+
 }
 
 .features-list div{
@@ -162,7 +162,7 @@ body {
     border-style: inset;
     border-width: 1px;
 
-  
+
       width: 90%;
     margin: 20px auto 30px auto;
     background-color: #fff;
@@ -176,7 +176,7 @@ body {
 }
 
 .feat-icons h3{
-  
+
 }
 
 .features-list h3{
@@ -212,7 +212,7 @@ body {
 /* 	opacity: 0.75; */
 }
 #footerClass{
-	
+
 	background-color: #17202A  ;
 }
 .panel-footer p{
@@ -248,7 +248,7 @@ body {
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
-  
+
   }
   /* End Header */
 }
@@ -284,7 +284,7 @@ body {
   /* End Header */
 
   /* Footer */
-  
+
   /* End Footer */
 
 

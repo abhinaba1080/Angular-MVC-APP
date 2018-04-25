@@ -1,4 +1,6 @@
 <header>
+  <link rel="stylesheet" type="text/css" href="styles/Carousel-style/carousel.css">
+
 		<nav id="header-nav" class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
@@ -89,203 +91,32 @@
   </div>
 <!--end of Modal-->
 
-<!--parallex effect-->
+<!-- Start of sliding jumbotron -->
 
-		<div class="containar">
+<div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active" id="slide1">
+                </div>
+                <div class="item" id="slide2">
+                </div>
+                <div class="item" id="slide3">
+                </div>
+            </div>
 
-			<div class="animatedParent">
-				<hr class="animated fadeIn slow go">
-			</div>
+            <a href="#carousel" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
 
-			<div class="animatedParent">
-     <div class="bgimg-1">
-        <div class="caption">
-          <span class="border">SCROLL DOWN</span>
-				</div>
-			</div>
-			</div>
-
-			<div class="animatedParent">
-				<hr class="animated fadeIn slow go">
-			</div>
-
-			<div class='animatedParent'>
-				<div class="animated bounceInUp padded" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-					<h3 style="text-align:center;">Parallax Demo</h3>
-					<p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero
-						ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque
-						non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis,
-						ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
-				</div>
-			</div>
-
-			<div class="animatedParent">
-				<hr class="animated fadeIn slow go">
-			</div>
-
-			<div class='animatedParent'>
-				<div class="bgimg-2 ">
-					<div class="caption">
-						<span class="animated bounceInUp padded  border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="animatedParent">
-				<hr class="animated fadeIn slow go">
-			</div>
-
-			<div class='animatedParent'>
-				<div class="animated bounceInUp padded" style="position:relative;">
-					<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-						<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-					</div>
-				</div>
-			</div>
-
-		<div class="animatedParent">
-				<hr class="animated fadeIn slow go">
-			</div>
-
-			<div class='animatedParent'>
-				<div class="bgimg-3">
-					<div class="caption">
-						<span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="animatedParent">
-				<hr class="animated fadeIn slow go">
-			</div>
-<!--
-			<div class='animatedParent'>
-				<div style="position:relative;">
-					<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-						<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class='animatedParent'>
-				<div class="bgimg-4">
-
-				</div>
-			</div>
-
-			<div class='animatedParent row article'>
-				<div id="text4" class='animated bounceInUp padded'>
-					<p class="animated fadeInUp slow">
-						Some text Goes here.Scroll up and down to really get the feeling of how Parallax Scrolling works.
-					</p>
-				</div>
-			</div>
-
-			<div class='animatedParent row article'>
-				<div class="bgimg-5 animated bounceInUp padded">
-
-				</div>
-			</div>
-			<div class='animatedParent'>
-				<div class="bgimg-6 animated bounceInDown slow">
-
-				</div>
-			</div>
-			<div class='animatedParent'>
-				<div class="bgimg-7">
-
-				</div>
-			</div> -->
-
-			<!-- <div class="bgimg-1">
-  <div class="caption">
-    <span class="border">COOL!</span>
-  </div>
-</div> -->
-
-
-			<!--    <script>
-$(document).ready(function(){
-	$.doTimeout(2500, function(){
-		$('.repeat.go').removeClass('go');
-
-		return true;
-	});
-	$.doTimeout(2520, function(){
-		$('.repeat').addClass('go');
-		return true;
-	});
-
-});
-
-</script>-->
-			</div>
-			<!--titbits information start start-->
-
-			<div class="containar">
-
-				<div class="features-list">
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-beautiful-3b64a0c2427397c3b404480270e6e810.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-easy-e42a56a4ef602000f9384f5b7b7f2fc3.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-social-218efec42ea309b03284623b0796b12e.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-community-e2f6c57d97635ea932c0e388f3578b67.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-tag-003c8e5b43978bfd6ca76a1dde4fc9c4.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-privacy-2e2f2ceb1aab632a406a0c72b30b3df2.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-beautiful-3b64a0c2427397c3b404480270e6e810.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-beautiful-3b64a0c2427397c3b404480270e6e810.png">
-						<h3>Slick Design</h3>
-						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
-					</div>
-
-
-				</div>
-
-			</div>
-
-			<!-- end of titbits information -->
-
-
-			<!-- end of parallax -->
-
-
+<!-- End of sliding jumbotron -->
 
 
 

@@ -1,0 +1,309 @@
+<header>
+		<nav id="header-nav" class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="index.html" class="pull-left visible-md visible-lg">
+						<div id="logo-img" alt="Logo image"></div>
+					</a>
+
+					<div class="navbar-brand">
+						<a href="index.html"><h1></h1></a>
+					</div>
+
+					<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+				</div>
+
+				<div id="collapsable-nav" class="collapse navbar-collapse">
+					<ul id="nav-list" class="nav navbar-nav navbar-right">
+						<li id="navHomeButton" class="visible-all active">
+							<a href="index.html">
+								<i class="fa fa-home" aria-hidden="true"></i> Home</a>
+						</li>
+						<li  data-toggle="modal" data-target="#myModal">
+							<a href="#">
+								<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Login</a>
+						</li>
+						<li>
+							<a ui-sref="signUp">
+								<i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;Register</a>
+						</li>
+						<li>
+							<a ui-sref="explore">
+								<i class="fa fa-rocket" aria-hidden="true"></i>&nbsp;Explore</a>
+						</li>
+						<li>
+							<span id="socialLinks">
+                <a href="#"><i id="SocialIcon" class="fa fa-facebook-square"></i></a>
+                <a href="#"><i id="SocialIcon" class="fa fa-google-plus-official"></i></a>
+                <a href="#"><i id="SocialIcon" class="fa fa-instagram"></i></a>
+                <a href="#"><i id="SocialIcon" class="fa fa-pinterest-square"></i></a>
+                <a href="#"><i id="SocialIcon" class="fa fa-youtube"></i></a>
+                <a href="#"><i id="SocialIcon" class="fa fa-twitter-square"></i></a>
+
+            </sapn>
+              </li>
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+        </div><!-- .container -->
+      </nav><!-- #header-nav -->
+    </header>
+
+
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div id="modalLogin" class="modal-dialog">
+
+      <!-- Modal content-->
+        <form class="modal-body"  id="login-form" method="post"  ng-controller="NavigationController as log">
+  				<div class="heading">Login to NewApp</div>
+  				<div class="left">
+    				<label for="email">Email</label> <br />
+    				<input type="email" name="email" id="email" ng-model="log.user.email"/> <br />
+   			 		<label for="password">Password</label> <br />
+    				<input type="password" name="password" id="pass" ng-model="log.user.password" /> <br />
+    				<input type="submit" value="Login" ng-click="log.logUserIn(log.user.email,log.user.password)" />
+  				</div>
+  				<div class="right">
+    				<div class="connect">Connect with</div>
+    				<a href="/auth/facebook" class="facebook">
+      			<span class="fontawesome-facebook"><i class="fa fa-facebook fa-10x" aria-hidden="true"></i></span>
+    				</a> <br />
+    				<a href="/auth/twitter" class="twitter">
+      			<span class="fontawesome-twitter"><i class="fa fa-twitter fa-10x" aria-hidden="true"></i></span>
+    				</a> <br />
+    				<a href="" class="google-plus">
+      			<span class="fontawesome-google-plus"><i class="fa fa-google-plus fa-10x " aria-hidden="true"></i></span>
+    				</a>
+  				</div>
+					<div class="modal-footer">
+          	<button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        	</div>
+				</form>
+    </div>
+  </div>
+<!--end of Modal-->
+
+<!--parallex effect-->
+
+		<div class="containar">
+
+			<div class="animatedParent">
+				<hr class="animated fadeIn slow go">
+			</div>
+
+			<div class="animatedParent">
+     <div class="bgimg-1">
+        <div class="caption">
+          <span class="border">SCROLL DOWN</span>
+				</div>
+			</div>
+			</div>
+
+			<div class="animatedParent">
+				<hr class="animated fadeIn slow go">
+			</div>
+
+			<div class='animatedParent'>
+				<div class="animated bounceInUp padded" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+					<h3 style="text-align:center;">Parallax Demo</h3>
+					<p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero
+						ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque
+						non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis,
+						ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
+				</div>
+			</div>
+
+			<div class="animatedParent">
+				<hr class="animated fadeIn slow go">
+			</div>
+
+			<div class='animatedParent'>
+				<div class="bgimg-2 ">
+					<div class="caption">
+						<span class="animated bounceInUp padded  border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="animatedParent">
+				<hr class="animated fadeIn slow go">
+			</div>
+
+			<div class='animatedParent'>
+				<div class="animated bounceInUp padded" style="position:relative;">
+					<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+						<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+					</div>
+				</div>
+			</div>
+
+		<div class="animatedParent">
+				<hr class="animated fadeIn slow go">
+			</div>
+
+			<div class='animatedParent'>
+				<div class="bgimg-3">
+					<div class="caption">
+						<span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="animatedParent">
+				<hr class="animated fadeIn slow go">
+			</div>
+<!--
+			<div class='animatedParent'>
+				<div style="position:relative;">
+					<div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+						<p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class='animatedParent'>
+				<div class="bgimg-4">
+
+				</div>
+			</div>
+
+			<div class='animatedParent row article'>
+				<div id="text4" class='animated bounceInUp padded'>
+					<p class="animated fadeInUp slow">
+						Some text Goes here.Scroll up and down to really get the feeling of how Parallax Scrolling works.
+					</p>
+				</div>
+			</div>
+
+			<div class='animatedParent row article'>
+				<div class="bgimg-5 animated bounceInUp padded">
+
+				</div>
+			</div>
+			<div class='animatedParent'>
+				<div class="bgimg-6 animated bounceInDown slow">
+
+				</div>
+			</div>
+			<div class='animatedParent'>
+				<div class="bgimg-7">
+
+				</div>
+			</div> -->
+
+			<!-- <div class="bgimg-1">
+  <div class="caption">
+    <span class="border">COOL!</span>
+  </div>
+</div> -->
+
+
+			<!--    <script>
+$(document).ready(function(){
+	$.doTimeout(2500, function(){
+		$('.repeat.go').removeClass('go');
+
+		return true;
+	});
+	$.doTimeout(2520, function(){
+		$('.repeat').addClass('go');
+		return true;
+	});
+
+});
+
+</script>-->
+			</div>
+			<!--titbits information start start-->
+
+			<div class="containar">
+
+				<div class="features-list">
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-beautiful-3b64a0c2427397c3b404480270e6e810.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-easy-e42a56a4ef602000f9384f5b7b7f2fc3.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-social-218efec42ea309b03284623b0796b12e.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-community-e2f6c57d97635ea932c0e388f3578b67.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-tag-003c8e5b43978bfd6ca76a1dde4fc9c4.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-privacy-2e2f2ceb1aab632a406a0c72b30b3df2.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-beautiful-3b64a0c2427397c3b404480270e6e810.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+					<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+						<img alt="Icon-beautiful" class="feat-icons" src="//du1frgvkr39c.cloudfront.net/assets/landing-page/icon-beautiful-3b64a0c2427397c3b404480270e6e810.png">
+						<h3>Slick Design</h3>
+						<p>Beautifully designed with care throughout the app from your bucket list to your profile page.</p>
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<!-- end of titbits information -->
+
+
+			<!-- end of parallax -->
+
+
+
+
+
+<!--start footer-->
+
+<footer id="footerClass" class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <p class="copyright guest"><span>NewApp Corporation</span> <em>© 2017</em></p>
+            <ul id="footerList">
+    	        <li id="footerItem"><a href="http://www.linkedin.com/legal/user-agreement?trk=hb_ft_userag">User Agreement</a></li>
+    	        <li id="footerItem"><a href="http://www.linkedin.com/legal/privacy-policy?trk=hb_ft_priv">Privacy Policy</a></li>
+    	        <li id="footerItem"><a href="https://linkedin.com/help/linkedin/answer/34593?lang=en">Community Guidelines</a></li>
+    	        <li  id="footerItem"><a href="http://www.linkedin.com/legal/cookie-policy?trk=hb_ft_cookie">Cookie Policy</a></li>
+    	        <li  id="footerItem"><a href="http://www.linkedin.com/legal/copyright-policy?trk=hb_ft_copy">Copyright Policy</a></li>
+    	        <li  id="footerItem"><a href="/psettings/guest-email-unsubscribe?trk=hb_ft_gunsub" rel="nofollow">Unsubscribe</a></li>
+            </ul>
+        </div>
+       </div>
+</footer>
+<!--end footer-->
