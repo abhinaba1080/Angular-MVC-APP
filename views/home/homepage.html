@@ -1,47 +1,53 @@
 <header>
+  
+<!--   Dependencies and libraries -->
   <link rel="stylesheet" type="text/css" href="styles/Carousel-style/carousel.css">
+  <link rel="stylesheet" type="text/css" href="styles/knowmore-style/knowmore.css">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-		<nav id="header-nav" class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<a href="index.html" class="pull-left visible-md visible-lg">
-						<div id="logo-img" alt="Logo image"></div>
-					</a>
+  <nav id="header-nav" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="index.html" class="pull-left visible-md visible-lg">
+          <div id="logo-img" alt="Logo image"></div>
+        </a>
 
-					<div class="navbar-brand">
-						<a href="index.html"><h1></h1></a>
-					</div>
+        <div class="navbar-brand">
+          <a href="index.html">
+            <h1></h1>
+          </a>
+        </div>
 
-					<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+        <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-				</div>
+      </div>
 
-				<div id="collapsable-nav" class="collapse navbar-collapse">
-					<ul id="nav-list" class="nav navbar-nav navbar-right">
-						<li id="navHomeButton" class="visible-all active">
-							<a href="index.html">
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+          <li id="navHomeButton" class="visible-all active">
+            <a href="index.html">
 								<i class="fa fa-home" aria-hidden="true"></i> Home</a>
-						</li>
-						<li  data-toggle="modal" data-target="#myModal">
-							<a href="#">
+          </li>
+          <li data-toggle="modal" data-target="#myModal">
+            <a href="#">
 								<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Login</a>
-						</li>
-						<li>
-							<a ui-sref="signUp">
+          </li>
+          <li>
+            <a ui-sref="signUp">
 								<i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;Register</a>
-						</li>
-						<li>
-							<a ui-sref="explore">
+          </li>
+          <li>
+            <a ui-sref="explore">
 								<i class="fa fa-rocket" aria-hidden="true"></i>&nbsp;Explore</a>
-						</li>
-						<li>
-							<span id="socialLinks">
+          </li>
+          <li>
+            <span id="socialLinks">
                 <a href="#"><i id="SocialIcon" class="fa fa-facebook-square"></i></a>
                 <a href="#"><i id="SocialIcon" class="fa fa-google-plus-official"></i></a>
                 <a href="#"><i id="SocialIcon" class="fa fa-instagram"></i></a>
@@ -77,73 +83,82 @@
     				<div class="connect">Connect with</div>
     				<a href="/auth/facebook" class="facebook">
       			<span class="fontawesome-facebook"><i class="fa fa-facebook fa-10x" aria-hidden="true"></i></span>
-    				</a> <br />
-    				<a href="/auth/twitter" class="twitter">
+            </a> <br />
+            <a href="/auth/twitter" class="twitter">
       			<span class="fontawesome-twitter"><i class="fa fa-twitter fa-10x" aria-hidden="true"></i></span>
     				</a> <br />
-    				<a href="" class="google-plus">
+            <a href="" class="google-plus">
       			<span class="fontawesome-google-plus"><i class="fa fa-google-plus fa-10x " aria-hidden="true"></i></span>
     				</a>
-  				</div>
-					<div class="modal-footer">
-          	<button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
-        	</div>
-				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      </form>
     </div>
-  </div>
-<!--end of Modal-->
+    </div>
+    <!--end of Modal-->
 
-<!-- Start of sliding jumbotron -->
+    <!-- Start of sliding carousel -->
 
-<div id="carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active" id="slide1">
-                  <h1>
-                    Kids are smart. Knowledge is power. Let them figure things out. </br> Don't turn into that grown-up who they won't come to.
-                  </h1>
-								   <button >
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active" id="slide1">
+          <h1>
+            Kids are smart. Knowledge is power. Let them figure things out. </br> Don't turn into that grown-up who they won't come to.
+          </h1>
+          <button>
                      <a href="#"><i class="fa fa-envelope-open-o" aria-hidden="true"></i>&nbsp;&nbsp;Start Exploring&nbsp;&nbsp;</a>
                    </button>
 
-                </div>
-                <div class="item" id="slide2">
-                </div>
-                <div class="item" id="slide3">
-                </div>
-            </div>
+        </div>
+        <div class="item" id="slide2">
+        </div>
+        <div class="item" id="slide3">
+        </div>
+      </div>
 
-            <a href="#carousel" class="left carousel-control" data-slide="prev">
+      <a href="#carousel" class="left carousel-control" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </a>
-            <a href="#carousel" class="right carousel-control" data-slide="next">
+      <a href="#carousel" class="right carousel-control" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
-        </div>
+    </div>
 
-<!-- End of sliding jumbotron -->
+    <!-- End of sliding carousel -->
+
+    <!-- Start of Know more Div -->
+
+    <div id="knowmore">
+       <span id="knowmorespan"> <i class="fa fa-handshake-o" aria-hidden="true"></i>
+         &nbsp; Confused where to join? Connect with other users and professional help</span>
+      <button class="btn btn-default btn-xs">Know more</button>
+    </div>
 
 
+    <!-- End of Know more Div -->
 
-<!--start footer-->
+    <!--start footer-->
 
-<footer id="footerClass" class="panel-footer">
+    <footer id="footerClass" class="panel-footer">
       <div class="container">
         <div class="row">
           <p class="copyright guest"><span>NewApp Corporation</span> <em>© 2017</em></p>
-            <ul id="footerList">
-    	        <li id="footerItem"><a href="http://www.linkedin.com/legal/user-agreement?trk=hb_ft_userag">User Agreement</a></li>
-    	        <li id="footerItem"><a href="http://www.linkedin.com/legal/privacy-policy?trk=hb_ft_priv">Privacy Policy</a></li>
-    	        <li id="footerItem"><a href="https://linkedin.com/help/linkedin/answer/34593?lang=en">Community Guidelines</a></li>
-    	        <li  id="footerItem"><a href="http://www.linkedin.com/legal/cookie-policy?trk=hb_ft_cookie">Cookie Policy</a></li>
-    	        <li  id="footerItem"><a href="http://www.linkedin.com/legal/copyright-policy?trk=hb_ft_copy">Copyright Policy</a></li>
-    	        <li  id="footerItem"><a href="/psettings/guest-email-unsubscribe?trk=hb_ft_gunsub" rel="nofollow">Unsubscribe</a></li>
-            </ul>
+          <ul id="footerList">
+            <li id="footerItem"><a href="http://www.linkedin.com/legal/user-agreement?trk=hb_ft_userag">User Agreement</a></li>
+            <li id="footerItem"><a href="http://www.linkedin.com/legal/privacy-policy?trk=hb_ft_priv">Privacy Policy</a></li>
+            <li id="footerItem"><a href="https://linkedin.com/help/linkedin/answer/34593?lang=en">Community Guidelines</a></li>
+            <li id="footerItem"><a href="http://www.linkedin.com/legal/cookie-policy?trk=hb_ft_cookie">Cookie Policy</a></li>
+            <li id="footerItem"><a href="http://www.linkedin.com/legal/copyright-policy?trk=hb_ft_copy">Copyright Policy</a></li>
+            <li id="footerItem"><a href="/psettings/guest-email-unsubscribe?trk=hb_ft_gunsub" rel="nofollow">Unsubscribe</a></li>
+          </ul>
         </div>
-       </div>
-</footer>
-<!--end footer-->
+      </div>
+    </footer>
+    <!--end footer-->
