@@ -1,0 +1,75 @@
+#srchByIntrstDiv{
+  background-color: #fd3753;
+  border: 1px solid #fd3753;
+  margin-top: 300px;
+  height:50px;
+  width: 100%;
+  box-shadow: 0 3px 5px #f4f4f4;
+}
+
+#srchByIntrstP{
+  text-align:center;
+  position:relative;
+  top:-70px;
+  font-size: 16px;
+  color: #FDFEFE ;
+  letter-spacing: .4px;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+
+.search-container input[type="text"]{
+   @include transition(all 0.30s ease-in-out);
+  outline: none;
+  display:inline;
+}
+
+
+#searchButton button{
+   background-color: #fd3753;
+   border: 1px solid #fd3753;
+   cursor: pointer;
+   color:#FDFEFE;
+}
+
+#searchButton button:hover{
+   border: 1px solid #3498DB;
+    transform: scale(1.1);
+ 
+}
+
+#pypButHP {
+    width: 220px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top:20px;
+    letter-spacing: .3px;
+    background-color: #009587;
+    color: #FFF;
+    border: 1px solid #009587;
+}
+
+#seperator{
+  margin-top: 40px;
+  letter-spacing: .4px;
+  font-weight: 300;
+  text-transform: capitalize;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+

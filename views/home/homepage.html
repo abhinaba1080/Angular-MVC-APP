@@ -4,6 +4,7 @@
   <link rel="stylesheet" type="text/css" href="styles/homepage-style/carousel.css">
   <link rel="stylesheet" type="text/css" href="styles/homepage-style/knowmore.css">
   <link rel="stylesheet" type="text/css" href="styles/homepage-style/services.css">
+  <link rel="stylesheet" type="text/css" href="styles/homepage-style/SearchByInterest.css">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -145,17 +146,17 @@
 
     <!-- End of Know more Div -->
 
-    <!-- Start of different educational options Divs-->
+    <!-- Start of Services divs-->
     <div class="serviceItm preschool">
       <a href="#" itemprop="url">
         <div id="preschoolIcon" class="servicesIcon"></div>
-        <span >Top Pre-schools</span>
+        <span>Top Pre-schools</span>
       </a>
     </div>
     <div class="serviceItm primary">
       <a href="#" itemprop="url">
         <div id="primaryIcon" class="servicesIcon"></div>
-        <span >Top Primay Institutes</span>
+        <span>Top Primay Institutes</span>
       </a>
     </div>
     <div class="serviceItm seconday">
@@ -183,14 +184,83 @@
       </a>
     </div>
 
-    <!-- Start of different educational options Divs-->
+    <!-- End of Services div-->
 
+
+    <!-- Start of Search Institues  by interest -->
+
+    <div id="srchByIntrstDiv" class="container">
+      <p id="srchByIntrstP">
+        <i class="fab fa-earlybirds"></i> &nbsp;&nbsp;You can also search Institues by Interest&nbsp;&nbsp;
+        <i class="fab fa-earlybirds"></i>
+      </p>
+    </div>
+
+
+    <div class="container">
+      <form id="searchServices" name="srchSrv" class="srchSrv-form" method="post" novalidate>
+        <div id="searchServicesDiv" class="row">
+          <div class="dropdown col-md-2 col-lg-2">
+            <select class="form-control placeholder">
+            <option value="">City</option>
+            <option value="1">Mumbai</option>
+            <option value="2">Mumbai</option>
+            <option value="3">Delhi</option>
+            <option value="4">Chennai</option>
+            <option value="5">Kolkata</option>
+            <option value="6">Bangalore</option>
+           </select>
+          </div>
+          <div class="dropdown col-md-2 col-lg-2">
+            <select class="form-control placeholder">
+            <option value="">Institue Type</option>
+            <option value="1">Any</option>
+            <option value="2">Primary</option>
+            <option value="3">High School</option>
+            <option value="4">College</option>
+            <option value="5">University</option>
+            <option value="6">Special</option>
+          </select>
+          </div>
+          <div class="dropdown col-md-2 col-lg-2">
+            <select class="form-control placeholder">
+            <option value="">Degree Type</option>
+            <option value="1">Any</option>
+            <option value="2">B.Tech</option>
+            <option value="3">LLB</option>
+            <option value="4">MA</option>
+            <option value="5">Science</option>
+            <option value="6">Special</option>
+          </select>
+          </div>
+          <div class="search-container col-md-5 col-lg-5">
+            <input class="form-control" type="text" placeholder="Search.." name="search">
+            </input>
+          </div>
+        <div id="searchButton" class="col-md-1 col-lg-1">
+          <button class="form-control">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="ownerPost">
+        <div id="seperator" align="center"> Are you a Institure Representative?</div>
+        <div class="pypButton" align="center">
+          <div class="pypBut" itemscope="" >
+            <a class="hideInfbApp btn tooltips btn-nbprimary" style="" id="pypButHP" onclick="" ><span itemprop="name">Post Your Free Ad </span> </a>
+          </div>
+        </div>
+    </div>
+    <!-- End of Search Institues  by interest -->
 
 
 
     <!--start footer-->
 
-        <footer id="footerClass" class="panel-footer">
+    <footer id="footerClass" class="panel-footer">
       <div class="container">
         <div class="row">
           <p class="copyright guest"><span>NewApp Corporation</span> <em>© 2017</em></p>
