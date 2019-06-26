@@ -1,2 +1,1 @@
-# NewApp
-This is a app about creative musics
+# Angular- MEAN stack
